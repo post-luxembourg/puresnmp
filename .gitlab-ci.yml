@@ -86,6 +86,6 @@ docs:
 
 publish-to-github:
   stage: publish
-  image: harbor.ptech.lu/gitlab-actions/push-to-github:release-2022.04.29.02
+  image: harbor.ptech.lu/gitlab-actions/push-to-github:release-2022.04.29.05
   script:
     - /run.sh
