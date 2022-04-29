@@ -1,0 +1,21 @@
+[MASTER]
+ignore=.git env tests
+persistent=no
+
+[REPORTS]
+output-format=parseable
+reports=no
+
+[BASIC]
+good-names=i,j,k,x,y,z,ex,Run,_,ui,ip
+
+[TYPECHECK]
+ignored-classes=optparse.Values,thread._local,_thread._local
+generated-members=add, all, get, delete, find, likefind, asdict, fromdict, diff, __table__
+
+[MESSAGES CONTROL]
+# Disable messages which are covered by SonarQube and black directly (and may
+# cause CLI warnings)
+
+# C0330 and C0326 are for black. The others are for SonarQube
+disable = C0111,C0411,R0912,C0330,C0326
