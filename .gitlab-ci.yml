@@ -62,9 +62,6 @@ cve:
 build-package:
   image: harbor.ptech.lu/gitlab-actions/pyproject-build:release-2022.04.29.01
   stage: build
-  variables:
-    GIT_STRATEGY: clone
-    GIT_DEPTH: 0
   script:
     - /run.sh
   artifacts:
@@ -91,6 +88,7 @@ publish-to-github:
   stage: publish
   variables:
     GIT_STRATEGY: clone
+    GIT_DEPTH: 0
   image: harbor.ptech.lu/gitlab-actions/push-to-github:release-2022.04.29.04
   script:
     - /run.sh
